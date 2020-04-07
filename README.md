@@ -50,6 +50,7 @@ citation("NPL")
 #### For EEG analyses
 * **concatenate.EEG**: The function allows to concatenate two epochs, usually used in the microstates analyses to include the stimulus and response aligned epochs.
 * **convert.eph.ep**: Since all EEG functions use the .ep format (Cartool format), this function converts the files from the usual .eph format to the .ep format. The .eph format contains a header that needs to be removed to be treated as a data frame or a matrix.
+* **convert.eph.ep.folder**: Same function as the previous one but for an entire directory.
 * **create.tva.files**: To allow the analyses of response-aligned EEG, Cartool requests a file (.tva) containing the RT of each trial, the accuracy of the response as well as the triggers' information. This function creates all the TVA files for each subject based on the behavioral data frame.
 * **delete.spaces.STEN**: STEN requires the name of the .eph files to be written without spaces. This function simply renames all the .eph files of a given folder.
 * **import.epochs.ep**: The function reads the different EEG files and brings them together in a data frame under the tidy format. 
