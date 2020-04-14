@@ -79,6 +79,6 @@ citation("NPL")
 If you need a specific tool to analyse your data do not hesitate to come to me and we can surely figure something out ;-)
 
 
-## Cheat Sheet from the NPL group
+## Cheat Sheets from the NPL group
 
-[Cheat Sheet Linear Mixed Models](https://github.com/EricMenetre/R-codes/blob/master/CheatSheet%20Linear%20Mixed%20Models.pdf)
+* [Cheat Sheet Linear Mixed Models](https://github.com/EricMenetre/R-codes/blob/master/CheatSheet%20Linear%20Mixed%20Models.pdf)
