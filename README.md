@@ -3,6 +3,7 @@
 
 The NPL package, standing for **N**euro**P**sycho**L**inguistic group package, is a collection of functions I needed to write during my PhD in the NeuroPsycholinguistic lab of the UNIGE. Some of the functions aim at helping the researcher to analyse behavioral or EEG data. The EEG functions intend mostly to fill the gap between the different softwares used in our lab (Cartool: https://sites.google.com/site/cartoolcommunity/ ; STEN: https://www.unil.ch/line/en/home/menuinst/mission/about-the-line/software--analysis-tools.html ; Ragu: http://www.thomaskoenig.ch/index.php/work/ragu), or to perform statistical analyses on the EEG data. 
 
+
 ## Before installing the package
 
 This packages uses some other packages. Please be sure that all the following packages are installed and up to date: 
@@ -76,3 +77,8 @@ citation("NPL")
 * **tanova.ragu.to.cartool**: To visualize the tanova results given by the Ragu software into the Cartool software. Be careful, the function dichotomizes the p-values. All p-values equal to or under 0.05 will be equal to 1 and p-values above 0.05 will be equal to 0.
 
 If you need a specific tool to analyse your data do not hesitate to come to me and we can surely figure something out ;-)
+
+
+## Cheat Sheet from the NPL group
+
+[Cheat Sheet Linear Mixed Models](https://github.com/EricMenetre/R-codes/blob/master/CheatSheet%20Linear%20Mixed%20Models.pdf)
