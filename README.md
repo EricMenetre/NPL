@@ -3,7 +3,23 @@
 
 The NPL package, standing for **N**euro**P**sycho**L**inguistic group package, is a collection of functions I needed to write during my PhD in the NeuroPsycholinguistic lab of the UNIGE. Some of the functions aim at helping the researcher to analyse behavioral or EEG data. The EEG functions intend mostly to fill the gap between the different softwares used in our lab (Cartool: https://sites.google.com/site/cartoolcommunity/ ; STEN: https://www.unil.ch/line/en/home/menuinst/mission/about-the-line/software--analysis-tools.html ; Ragu: http://www.thomaskoenig.ch/index.php/work/ragu), or to perform statistical analyses on the EEG data. 
 
-## To install the package, follow these steps: 
+## Before installing the package
+
+This packages uses some other packages. Please be sure that all the following packages are installed and up to date: 
+
+```r
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("tidyr")
+install.packages("tibble")
+install.packages("ggpubr")
+install.packages("bannerCommenter")
+install.packages("lme4")
+install.packages("lmerTest")
+
+```
+
+## To install the NPL package, follow these steps: 
 
 Step 1: install the devtools package using the following command line
 
@@ -45,6 +61,8 @@ citation("NPL")
 * **clean.sd**: This function aims at cleaning the data from the extreme latencies (according to a certain number of SD). It creates an array of values without the values above and under the mean of each group.
 * **clean.subj.group**: This function is very similar to the previous one but aims at detecting if the average latencies of a subject are extreme compared to the rest of the group without this subject.
 * **date.banner**: This simple function based on the bannerCommenter package creates a banner including the date and the day to keep track of the code.
+* **exp_plots_LMM**: The function creates useful plots to investigate the data before undergoing linear mixed models analyses.
+* **LMM_check**: Once a linear mixed model is fitted, this function checks if the postulates of the model are respected.
 
 
 #### For EEG analyses
