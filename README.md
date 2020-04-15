@@ -1,5 +1,5 @@
 ![alt text](https://alumniunige.ch/wp-content/uploads/2017/12/UNIGE-logo-site-ALUMNI-unige-4.jpg "Logo Title Text 1")
-# NPL package  
+# The NPL package  
 
 The NPL package, standing for **N**euro**P**sycho**L**inguistic group package, is a collection of functions I needed to write during my PhD in the NeuroPsycholinguistic lab of the UNIGE. Some of the functions aim at helping the researcher to analyse behavioral or EEG data. The EEG functions intend mostly to fill the gap between the different softwares used in our lab (Cartool: https://sites.google.com/site/cartoolcommunity/ ; STEN: https://www.unil.ch/line/en/home/menuinst/mission/about-the-line/software--analysis-tools.html ; Ragu: http://www.thomaskoenig.ch/index.php/work/ragu), or to perform statistical analyses on the EEG data. 
 
