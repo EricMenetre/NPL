@@ -64,6 +64,7 @@ citation("NPL")
 * **date.banner**: This simple function based on the bannerCommenter package creates a banner including the date and the day to keep track of the code.
 * **exp_plots_LMM**: The function creates useful plots to investigate the data before undergoing linear mixed models analyses.
 * **LMM_check**: Once a linear mixed model is fitted, this function checks if the postulates of the model are respected.
+* **ICC_ranef**: This function estimates the intra-class correlation (ICC) of every random effects of an lmer or glmer model. The ICC is an index of how much a given random effect explains the total variance. In other words, it gives an estimate of the variance inside a class. If the ICC is high, it means that the differences inside the class are important. When the ICC is low, the measures are fairly similar inside the class.
 
 
 #### For EEG analyses
