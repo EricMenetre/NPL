@@ -6,7 +6,7 @@ The NPL package, standing for **N**euro**P**sycho**L**inguistic group package, i
 
 ## Before installing the package
 
-This packages uses some other packages. Please be sure that all the following packages are installed and up to date: 
+The NPL package uses some other packages. Please be sure that all the following packages are installed and up to date: 
 
 ```r
 install.packages("ggplot2")
