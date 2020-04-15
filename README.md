@@ -56,9 +56,9 @@ Please visit: https://www.unige.ch/fapse/psycholinguistique/equipes/npl/membres/
 citation("NPL")
 ```
 
-### Functions included in the package
+### Functions included in the package:
 
-#### For behavioral analyses
+#### For behavioral analyses:
 * **clean.sd**: This function aims at cleaning the data from the extreme latencies (according to a certain number of SD). It creates an array of values without the values above and under the mean of each group.
 * **clean.subj.group**: This function is very similar to the previous one but aims at detecting if the average latencies of a subject are extreme compared to the rest of the group without this subject.
 * **date.banner**: This simple function based on the bannerCommenter package creates a banner including the date and the day to keep track of the code.
@@ -67,7 +67,7 @@ citation("NPL")
 * **ICC_ranef**: This function estimates the intra-class correlation (ICC) of every random effects of an lmer or glmer model. The ICC is an index of how much a given random effect explains the total variance. In other words, it gives an estimate of the variance inside a class. If the ICC is high, it means that the differences inside the class are important. When the ICC is low, the measures are fairly similar inside the class.
 
 
-#### For EEG analyses
+#### For EEG analyses:
 * **concatenate.EEG**: The function allows to concatenate two epochs, usually used in the microstates analyses to include the stimulus and response aligned epochs.
 * **convert.eph.ep**: Since all EEG functions use the .ep format (Cartool format), this function converts the files from the usual .eph format to the .ep format. The .eph format contains a header that needs to be removed to be treated as a data frame or a matrix.
 * **convert.eph.ep.folder**: Same function as the previous one but for an entire directory.
@@ -80,6 +80,6 @@ citation("NPL")
 If you need a specific tool to analyse your data do not hesitate to come to me and we can surely figure something out ;-)
 
 
-## Cheat Sheets from the NPL group
+## Cheat Sheets from the NPL group:
 
 * [Cheat Sheet Linear Mixed Models](https://github.com/EricMenetre/R-codes/blob/master/CheatSheet%20Linear%20Mixed%20Models.pdf)
