@@ -1,6 +1,6 @@
 #' A function to get the fitting information for a list of lmer of glmer models
 #'
-#' This function takes as input a list of models and returns the AIC, BIC, log likelihood, deviance and residual degrees of freedom of each one of the models. The models are then ordered according to the smallest AIC.
+#' This function takes as input a list of models and returns the AIC, BIC, log likelihood, deviance and residual degrees of freedom of each one of the lmer and glmer models. When REML is set to TRUE, the functions returns for this model the cAIC from the cAIC4 pkg. The models are then ordered according to the smallest AIC or cAIC.
 #'
 #' @param models A list of lmer or glmer models under the form list(M1 = m1, M2 = m2, ..., Mn = mn). it is also possible to enter the data without names: c(m1, m2, m3) but this way of doing might be confusing when having many models.
 #' @keywords AIC BIC logLik deviance df_resid GLMM LMM lmer glmer
