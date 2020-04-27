@@ -4,12 +4,12 @@
 \alias{clean.sd}
 \title{A function to remove extreme RT}
 \usage{
-clean.sd(df.var.val, df.var.group, n.sd, data, fill = NA)
+clean.sd(df.var.val, df.var.group = "none", n.sd, data, fill = NA)
 }
 \arguments{
 \item{df.var.val}{Dataframe$column containing the RT}
 
-\item{df.var.group}{Dataframe$column containing the groupping variable for example the age groups}
+\item{df.var.group}{Dataframe$column containing the groupping variable for example the age groups. If your experiment does not include groups, set this argument to "none". Default is "none"}
 
 \item{n.sd}{Number of standard deviations above the mean where to cut}
 
@@ -18,7 +18,8 @@ clean.sd(df.var.val, df.var.group, n.sd, data, fill = NA)
 \item{fill}{Value to replace the extreme values by. The default is NA}
 }
 \description{
-This function creates a vector containing the RT without the extremes values. Values are defined as extreme when higer than a certain number of standard deviations from the mean of each subject individually
+This function creates a new vector called clean.val containing the RT without the extremes values. Values are defined as extreme when higer than a certain number of standard deviations from the mean of each subject individually
+Once the function finished running, simply attribute the clean.val vector to your data frame under the form: my_data$my_clean_RT_variable <- clean.val.
 }
 \keyword{RT}
 \keyword{clean}

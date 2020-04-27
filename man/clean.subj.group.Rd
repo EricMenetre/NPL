@@ -7,7 +7,15 @@
 clean.subj.group(group.var, subj.var, RT.var, N.sd, data)
 }
 \arguments{
-\item{group.var}{Groupping variable for example age group}
+\item{group.var}{Groupping variable for example age group. Use the raw name of the column e.g. group instead of data$group without "" either}
+
+\item{subj.var}{Subject variable. Use the raw name of the column e.g. subjects instead of data$subjects without "" either}
+
+\item{RT.var}{Variable containing the reaction times. Use the raw name of the column e.g. RT instead of data$RT without "" either}
+
+\item{N.sd}{Number of standard deviation above and under the mean where to put the rejection boundary.}
+
+\item{data}{Name of the dataframe containing the experimental data.}
 }
 \description{
 This function examines the data and gives back which subjects are to be removed because of mean RT above or under a certain number of standard deviations
