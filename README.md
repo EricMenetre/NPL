@@ -79,6 +79,11 @@ citation("NPL")
 * **subtract.eeg**: This function aims at subtracting two EEG files of the same size (same number of time frames and electrodes).
 * **tanova.ragu.to.cartool**: To visualize the tanova results given by the Ragu software into the Cartool software. Be careful, the function dichotomizes the p-values. All p-values equal to or under 0.05 will be equal to 1 and p-values above 0.05 will be equal to 0.
 
+#### Writing and reporting results
+
+* **number_to_word**: Function to transform integer (1,2,3,...) to words ("one", "two", "three",...). When writing results in RMarkdown, one might want to avoid writing small number when calling outputs from the analyses in the text. For exemple: "`r my_number`  patients outperformed the controls" might get printed as "2 patients outperformed the controls". The function allows to write it as "`r number_to_word(my_number, cap = TRUE)` patients outperformed the controls" might get now printed as "Two patients outperformed the controls"
+* **report_results**: This function helps the user to report easily his statistical results in the text of a publication, limitating report mistakes and number rounding mistakes. The function takes as argument the statistical model to report and the model used. The supported methods are the `anova()` of a model, the `Anova()` (from the car package), the result from a Chi square and the `summary()` of a model. See `help(report_results)` for more details.
+
 If you need a specific tool to analyse your data do not hesitate to come to me and we can surely figure something out ;-)
 
 
