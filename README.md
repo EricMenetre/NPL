@@ -19,6 +19,7 @@ install.packages("lme4")
 install.packages("lmerTest")
 
 ```
+If you encounter problem to install these packages, please update your R and Rstudio versions.
 
 ## To install the NPL package, follow these steps: 
 
@@ -44,7 +45,7 @@ Step 4: load the package like any other package anytime you want to use it
 library(NPL)
 ```
 The package will be improved over time, please update regularly your package version using the command line given at the third step. 
-
+If you encounter problem to install these packages, please update your R and Rstudio versions.
 If you notice a bug or you have trouble using a function, please contact me at: Eric.Menetre@unige.ch
 
 Please visit: https://www.unige.ch/fapse/psycholinguistique/equipes/npl/membres/eric-menetre/
