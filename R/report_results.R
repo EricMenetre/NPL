@@ -1,26 +1,38 @@
 #' A function to create automatically output to report stats results in publications
-#' 
+#'
 #' This function returns a data frame, in which, for each effect, a text output containing the results to export in the publications are produced.
 #'
 #' @param model_data For "mainef_anova", "chisq", "mainef_Anova" and "summary" methods, put the statistical model. For the "emmeans" method, create an object as: your_model$pairwise..., and in a second step, convert this model in data frame using the as.data.frame() function and use this transformed model as argument.
 #' @param method Statistical method employed: either "mainef_anova", in this case an anova(model_data) will be performed, "chisq", then the results of the model will be used, "mainef_Anova" the Anova(model_data) from the car package will be performed. The "summary" method uses the summary(model_data).
 #' @export
-#' 
+#'
 
 report_results <- function(model_data, method){
+  require(lme4)
   if(method == "mainef_anova"){
     anova_table <- anova(model_data)
-    
-    effects <- paste("F(", anova_table$Df,") = ", round(anova_table$`F value`,2), " p = ", sep = "")
-    names_eff <- rownames(anova_table)
-    output <- data.frame(names_eff, effects)
-    output$p <- round(anova_table$`Pr(>F)`,3)
-    output$p <- ifelse(output$p == 0.000, "<0.001", output$p)
-    output <-output[1:(nrow(output)-1),]
-    output$effects <- paste(output$effects, output$p, sep = "")
-    output$p <- NULL
-    return(output)
-    
+    if(isLMM(model_data) == TRUE | isGLMM(model_data)== TRUE){
+      effects <- paste("F(", anova_table$NumDF,",",round(anova_table$DenDF,2), ") = ", round(anova_table$`F value`,2), "; p = ", sep = "")
+      names_eff <- rownames(anova_table)
+      output <- data.frame(names_eff, effects)
+      output$p <- round(anova_table$`Pr(>F)`,3)
+      output$p <- ifelse(output$p == 0.000, "<0.001", output$p)
+      output$effects <- paste(output$effects, output$p, sep = "")
+      output$p <- NULL
+      return(output)
+    } else {
+      effects <- paste("F(", anova_table$Df,") = ", round(anova_table$`F value`,2), "; p = ", sep = "")
+      names_eff <- rownames(anova_table)
+      output <- data.frame(names_eff, effects)
+      output$p <- round(anova_table$`Pr(>F)`,3)
+      output$p <- ifelse(output$p == 0.000, "<0.001", output$p)
+      output$effects <- paste(output$effects, output$p, sep = "")
+      output$p <- NULL
+      return(output)
+    }
+
+
+
   }else if(method == "chisq"){
     if(model_data$p.value < 0.001){
       return(paste("X2 = ",round(model_data$statistic,2), "; p<0.001", sep = ""))
@@ -58,8 +70,19 @@ report_results <- function(model_data, method){
     output$report <- paste(output$report, output$p)
     output$p <- NULL
     return(output)
-   
+
   } else if(method == "summary"){
+    if(isLMM(model_data)){
+      summary_model <- summary(model_data)
+      coefs <- as.data.frame(summary_model$coefficients)
+      effects <- rownames(coefs)
+      output <- data.frame(effects)
+      output$report <- paste("t(", round(coefs$df,2), ") = ", round(coefs$`t value`,2), "; p ", sep = "")
+      output$p <- ifelse(round(coefs$`Pr(>|t|)`,3) < 0.001, "<0.001", paste("= ", round(coefs$`Pr(>|t|)`,3), sep = ""))
+      output$report <- paste(output$report, output$p, sep = "")
+      output$p <- NULL
+      return(output)
+    }
     summary_model <- summary(model_data)
     coefs <- as.data.frame(summary_model$coefficients)
     effects <- rownames(coefs)
@@ -69,5 +92,7 @@ report_results <- function(model_data, method){
     output$report <- paste(output$report, output$p, sep = "")
     output$p <- NULL
     return(output)
+  } else{
+    return("Non-supported method. Try either mainef_anova, mainef_Anova, summary, emmeans, or chisq")
   }
 }
