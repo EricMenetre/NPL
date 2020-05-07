@@ -30,7 +30,6 @@ clean.subj.group <- function(subj.var, RT.var, N.sd, data, groupping = FALSE, gr
 
     # Estimation of the upper and inferior limits for each subject inside each age group, excluding each subject one after the other
     for (i in 1:nrow(subj)) {
-      group_temp <- subj$group[i]
       subject_temp <- subj$subject[i]
 
       criterion[i,2:5] <- data%>%
