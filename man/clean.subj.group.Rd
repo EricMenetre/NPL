@@ -4,11 +4,16 @@
 \alias{clean.subj.group}
 \title{A function to remove outlier subjects}
 \usage{
-clean.subj.group(group.var, subj.var, RT.var, N.sd, data)
+clean.subj.group(
+  subj.var,
+  RT.var,
+  N.sd,
+  data,
+  groupping = FALSE,
+  group.var = NULL
+)
 }
 \arguments{
-\item{group.var}{Groupping variable for example age group. Use the raw name of the column e.g. group instead of data$group without "" either}
-
 \item{subj.var}{Subject variable. Use the raw name of the column e.g. subjects instead of data$subjects without "" either}
 
 \item{RT.var}{Variable containing the reaction times. Use the raw name of the column e.g. RT instead of data$RT without "" either}
@@ -16,6 +21,10 @@ clean.subj.group(group.var, subj.var, RT.var, N.sd, data)
 \item{N.sd}{Number of standard deviation above and under the mean where to put the rejection boundary.}
 
 \item{data}{Name of the dataframe containing the experimental data.}
+
+\item{groupping}{Specify TRUE if results need to be differentiated by group. Default is FALSE. If set to TRUE, specify the group.var argument.}
+
+\item{group.var}{Groupping variable for example age group. Use the raw name of the column e.g. group instead of data$group without "" either. The default is NULL, use it like this without groupping variable in your data. This argument is linked to the groupping one. if groupping = TRUE, specify the group.var argument.}
 }
 \description{
 This function examines the data and gives back which subjects are to be removed because of mean RT above or under a certain number of standard deviations
