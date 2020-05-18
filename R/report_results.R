@@ -12,11 +12,11 @@ report_results <- function(model_data, method){
   if(method == "mainef_anova"){
     anova_table <- anova(model_data)
     if(isLMM(model_data) == TRUE | isGLMM(model_data)== TRUE){
-      effects <- paste("F(", anova_table$NumDF,",",round(anova_table$DenDF,2), ") = ", round(anova_table$`F value`,2), "; p = ", sep = "")
+      effects <- paste("F(", anova_table$NumDF,",",round(anova_table$DenDF,2), ") = ", round(anova_table$`F value`,2), "; p ", sep = "")
       names_eff <- rownames(anova_table)
       output <- data.frame(names_eff, effects)
       output$p <- round(anova_table$`Pr(>F)`,3)
-      output$p <- ifelse(output$p == 0.000, "<0.001", output$p)
+      output$p <- ifelse(output$p == 0.000, "<0.001", paste("= ",output$p, sep = ""))
       output$effects <- paste(output$effects, output$p, sep = "")
       output$p <- NULL
       return(output)
@@ -25,7 +25,7 @@ report_results <- function(model_data, method){
       names_eff <- rownames(anova_table)
       output <- data.frame(names_eff, effects)
       output$p <- round(anova_table$`Pr(>F)`,3)
-      output$p <- ifelse(output$p == 0.000, "<0.001", output$p)
+      output$p <- ifelse(output$p == 0.000, "<0.001",  paste("= ",output$p, sep = ""))
       output$effects <- paste(output$effects, output$p, sep = "")
       output$p <- NULL
       return(output)
@@ -39,12 +39,13 @@ report_results <- function(model_data, method){
     } else {
       return(paste( "X2 = ",round(model_data$statistic,2), "; p = ", round(model_data$p.value,3), sep = ""))
     }
+
   }else if(method == "emmeans"){
     post_hoc <- model_data
     contrasts_index <- grep("estimate", colnames(post_hoc))-1
     output <- data.frame(post_hoc[,1:contrasts_index])
     if(sum(grepl("t.ratio", colnames(post_hoc))) == 1){
-      output$report <- paste("t(", post_hoc$df,") = ", round(post_hoc$t.ratio,2), "; p ", sep = "")
+      output$report <- paste("t(", round(post_hoc$df,2),") = ", round(post_hoc$t.ratio,2), "; p", sep = "")
       output$p <- post_hoc$p.value
       output$p <- ifelse(post_hoc$p.value < 0.001, "<0.001", paste("= ",round(post_hoc$p.value,3)))
       output$report <- paste(output$report, output$p)
