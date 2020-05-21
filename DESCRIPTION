@@ -1,13 +1,13 @@
 Package: NPL
-Title: An incomplete toolkit for the researcher in NeuroPsycholinguistic
-Version: 0.0.1.7
+Title: An incomplete toolkit for the researcher in NeuroPsychoLinguistic
+Version: 0.0.1.8
 Authors@R: 
     person(given = "Eric",
            family = "MENETRE",
            role = c("aut", "cre"),
            email = "Eric.Menetre@unige.com",
            comment = c(ORCID = "https://orcid.org/0000-0002-1101-1288", GitHub = "EricMenetre", web_page = "https://www.unige.ch/fapse/psycholinguistique/equipes/npl/membres/eric-menetre/"))
-Description: This package gathers all the function I created during my PhD in the NeuroPsycholinguistic lab of the UNIGE. The functions aim at helping the researcher to perform behavioral and EEG analyses, espacially when using the Cartool, Ragu, STEN and E-Prime softwares.
+Description: This package gathers all the function I created during my PhD in the NeuroPsycholinguistic lab of the UNIGE. The functions aim at helping the researcher to perform behavioral and EEG analyses, espacially when using the Cartool, Ragu, STEN and E-Prime softwares. The functions can be very useful as well for other fields of psychology.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
