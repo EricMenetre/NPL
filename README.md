@@ -17,7 +17,9 @@ install.packages("ggpubr")
 install.packages("bannerCommenter")
 install.packages("lme4")
 install.packages("lmerTest")
-
+install.packages("car")
+install.packages("emmeans")
+install.packages("cAIC4")
 ```
 If you encounter problem to install these packages, please update your R and Rstudio versions.
 
@@ -45,7 +47,8 @@ Step 4: load the package like any other package anytime you want to use it
 library(NPL)
 ```
 The package will be improved over time, please update regularly your package version using the command line given at the third step. 
-If you encounter problem to install these packages, please update your R and Rstudio versions.
+If you encounter problem to install these packages, please update your R and Rstudio versions. If the problem persists, be sure that the path where the package is saved does not contains accents. To find out where the packages downloaded from GitHub are saved use the `?install_github()` command (after loading the package devtools). If the path contains accents, for PC owners, create a temporary folder on the root directory of your C disk, and use the `.libPaths("C:/your_new_folder")` command and repeat the installation process. When the process is done, copy the NPL folder from the temporary folder to your library. You will find the path in the `?install_github()` command. For mac user, the problem did not occured yet. If so, please contact Eric Ménétré.
+
 If you notice a bug or you have trouble using a function, please contact me at: Eric.Menetre@unige.ch
 
 Please visit: https://www.unige.ch/fapse/psycholinguistique/equipes/npl/membres/eric-menetre/
@@ -84,7 +87,7 @@ citation("NPL")
 #### Writing and reporting results
 
 * **number_to_word**: Function to transform integer (1,2,3,...) to words ("one", "two", "three",...). When writing results in RMarkdown, one might want to avoid writing small number when calling outputs from the analyses in the text. For exemple: "`r my_number`  patients outperformed the controls" might get printed as "2 patients outperformed the controls". The function allows to write it as "`r number_to_word(my_number, cap = TRUE)` patients outperformed the controls" might get now printed as "Two patients outperformed the controls"
-* **report_results**: This function helps the user to report easily his statistical results in the text of a publication, limitating report mistakes and number rounding mistakes. The function takes as argument the statistical model to report and the model used. The supported methods are the `anova()` of a model, the `Anova()` (from the car package), the result from a Chi square and the `summary()` of a model. See `help(report_results)` for more details.
+* **report_results**: This function helps the user to report easily his statistical results in the text of a publication, limitating report mistakes and number rounding mistakes. The function takes as argument the statistical model to report and the model used. The supported methods are the `anova()` of a model, the `Anova()` (from the car package), the result from a `chisq.test()`model, a post-hoc `emmeans()` model and the `summary()` of a model. See `help(report_results)` for more details.
 
 If you need a specific tool to analyse your data do not hesitate to come to me and we can surely figure something out ;-)
 
