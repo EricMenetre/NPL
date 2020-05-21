@@ -20,6 +20,7 @@ install.packages("lmerTest")
 install.packages("car")
 install.packages("emmeans")
 install.packages("cAIC4")
+install.packages("nlme")
 ```
 If you encounter problem to install these packages, please update your R and Rstudio versions.
 
