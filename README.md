@@ -57,7 +57,7 @@ Please visit: https://www.unige.ch/fapse/psycholinguistique/equipes/npl/membres/
 citation("NPL")
 ```
 
-### Functions included in the package:
+### Functions included in the package (V0.0.1.8):
 
 #### For behavioral analyses:
 * **clean.sd**: This function aims at cleaning the data from the extreme latencies (according to a certain number of SD). It creates an array of values without the values above and under the mean of each group.
