@@ -21,6 +21,7 @@ install.packages("car")
 install.packages("emmeans")
 install.packages("cAIC4")
 install.packages("nlme")
+install.packages("DescTools")
 ```
 If you encounter problem to install these packages, please update your R and Rstudio versions.
 
@@ -84,6 +85,7 @@ citation("NPL")
 * **import.epochs.ep**: The function reads the different EEG files and brings them together in a data frame under the tidy format. 
 * **subtract.eeg**: This function aims at subtracting two EEG files of the same size (same number of time frames and electrodes).
 * **tanova.ragu.to.cartool**: To visualize the tanova results given by the Ragu software into the Cartool software. Be careful, the function dichotomizes the p-values. All p-values equal to or under 0.05 will be equal to 1 and p-values above 0.05 will be equal to 0.
+* **find_max_amp_diff**: A function to find the maximum amplitude difference between two conditions among all electrodes. The point is to help the user to select the electrode showing the maximum differences when performing peak analysis. Before using this function, import your data with import.epochs.ep().
 
 #### Writing and reporting results
 
