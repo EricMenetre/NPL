@@ -2,9 +2,7 @@
 % Please edit documentation in R/import_stats_Ragu.R
 \name{import_stats_Ragu}
 \alias{import_stats_Ragu}
-\title{This function turns the .xlsx exports data files from Ragu into a data frame compatible for 
-data analysis in R under the tidy format. To use the function attribute it to an element, just like
-the read_excel function}
+\title{A function to import stats data from Ragu into R}
 \usage{
 import_stats_Ragu(path, n_maps, n_conditions)
 }
@@ -16,7 +14,7 @@ import_stats_Ragu(path, n_maps, n_conditions)
 \item{n_conditions}{Number of between subjects conditions defined in the Ragu settings}
 }
 \description{
-This function turns the .xlsx exports data files from Ragu into a data frame compatible for 
+This function turns the .xlsx exports data files from Ragu into a data frame compatible for
 data analysis in R under the tidy format. To use the function attribute it to an element, just like
 the read_excel function
 }
