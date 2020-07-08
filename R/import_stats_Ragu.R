@@ -17,8 +17,8 @@ import_stats_Ragu <- function(path, n_maps, n_conditions){
   library(dplyr)
   library(stringr)
 
-  #' Each maps are represented as a sheet in the Excel file.
-  #' We need to create an array with the names of each sheet.
+  # Each maps are represented as a sheet in the Excel file.
+  # We need to create an array with the names of each sheet.
   sheets <- paste("Class_", 1:n_maps, sep = "")
   maps <- paste("Map_", 1:n_maps, sep = "")
 
