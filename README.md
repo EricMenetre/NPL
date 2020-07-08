@@ -22,6 +22,7 @@ install.packages("emmeans")
 install.packages("cAIC4")
 install.packages("nlme")
 install.packages("DescTools")
+install.packages("stringr")
 ```
 If you encounter problem to install these packages, please update your R and Rstudio versions.
 
