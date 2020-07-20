@@ -1,11 +1,10 @@
 #' A function to convert number into words for RMarkdown
-#' 
+#'
 #' It is usually conventional that integers below 10 should be written in words instead of numbers. In RMarkdown, when writing results, the the output of the results, the user can put the numbers in the present function to convert it automatically into text. If the result to display is 2, then number_toword(2) will return "two".
-#' 
+#'
 #'@param number Integer to convert into word
 #'@param cap If TRUE, the first letter of the word will be a capital. Default is FALSE
 #'@export
-#'@example number_to_word(2, cap = FALSE)
 
 number_to_word <- function(number, cap = FALSE){
   if(cap == FALSE){
@@ -33,7 +32,7 @@ number_to_word <- function(number, cap = FALSE){
       return("ten")
     } else if(number > 10 | number < 0){
       return(number)
-    } 
+    }
   } else if(cap == TRUE){
     if(number == 0){
       return("Zero")
@@ -59,6 +58,6 @@ number_to_word <- function(number, cap = FALSE){
       return("Ten")
     } else if(number > 10 | number < 0){
       return(number)
-    } 
+    }
   }
 }
