@@ -1,6 +1,6 @@
-#' A function to round up entire dataframe
+#' A function to round entire dataframe
 #'
-#' This function enables tue user to round up all values in a dataframe. The functions isolate double variables and round them up.
+#' This function enables tue user to round all values in a dataframe. The function isolates double variables and round them.
 #'
 #' @param df a dataframe under the data frame format or a Tibble
 #' @param digits number of decimal wanted

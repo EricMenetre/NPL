@@ -75,7 +75,7 @@ citation("NPL")
 * **mod_fitting**: This function takes as input a list (using the `list()` function) of lmer or glmer models and returns a table containing all the fitting information available (AIC; BIC; log likelihood; deviance; number of residual DF). The models are then ordered according to the smallest AIC.
 * **cross_anova_models**: This function, as the previous one, takes as input a list of models (using the `list()` function) and returns a cross table matrix (N models from the list times N models from the list) and gives the `anova()` of the models two by two. This helps chosing the model with the best fitting. The user should check the simpler model compared to the same model with one more parameter. If the p-value is significant, then take this model as reference and continue so until reaching the most complex model with a significantly better fitting than the previous one. 
 * **std_error**: Function to calculate the standard error of an array. 
-* **round_df**: This function allows the user to round values of an entire dataframe, even though it contains columns with characters.These columns will be simply ignored.
+* **round_df**: This function allows the user to round values of an entire dataframe, even though it contains columns with characters. These columns will be simply ignored.
 
 
 #### For EEG analyses:

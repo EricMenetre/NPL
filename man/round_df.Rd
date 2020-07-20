@@ -2,7 +2,7 @@
 % Please edit documentation in R/round_df.R
 \name{round_df}
 \alias{round_df}
-\title{A function to round up entire dataframe}
+\title{A function to round entire dataframe}
 \usage{
 round_df(df, digits)
 }
@@ -12,7 +12,7 @@ round_df(df, digits)
 \item{digits}{number of decimal wanted}
 }
 \description{
-This function enables tue user to round up all values in a dataframe. The functions isolate double variables and round them up.
+This function enables tue user to round all values in a dataframe. The function isolates double variables and round them.
 }
 \keyword{data}
 \keyword{frame}
