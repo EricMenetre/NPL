@@ -23,6 +23,7 @@ install.packages("cAIC4")
 install.packages("nlme")
 install.packages("DescTools")
 install.packages("stringr")
+install.packages("RColorBrewer")
 ```
 If you encounter problem to install these packages, please update your R and Rstudio versions.
 
@@ -90,6 +91,7 @@ citation("NPL")
 * **find_max_amp_diff**: A function to find the maximum amplitude difference between two conditions among all electrodes. The point is to help the user to select the electrode showing the maximum differences when performing peak analysis. Before using this function, import your data with import.epochs.ep().
 * **import_stats_Ragu**: A function to import the statistics raw output from a microstates analysis performed in Ragu. This function imports the data and reshape them automatically to make them ready to be analyzed in R with statistical models (mixed models or RM ANOVA).
 * **read_seg_file**: This function is able to import raw data contained into a .seg file from Cartool (usually microstates segmentation file) into R for visualisation or analysis purposes.
+* **plot_microstates**: A function to create directly publishable microstates plots per condition, taking as input the .seg file from Cartool.
 
 #### Writing and reporting results
 
