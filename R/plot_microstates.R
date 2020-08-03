@@ -6,7 +6,7 @@
 #' @param vline_onset Argument where to specify if the plot should include a vertical line at the onet of the stimulus (where time = 0). Disable this option when working with response aligned data or time in time frames. Default is FALSE.
 #' @param time_ms An array describing the time in ms. Default is "none" implying that time in time frames will be taken into account.To create an array of time values in ms, here is an example. Imagine epochs of 155 time frames (downsampled by 4), here could be an array : c(seq(-100, 0, by = 4), seq(5,520, by = 4))
 #' @param size_hist The microstates maps are represented by segments present at each time frame. However, depending on the width of the desired plot, there might be spaces between segments. This parameter allows the user to change the width of the segment to cover the entire space. To better understand the purpose of this parameter, try setting it to 0.5 and to 4 and see the difference. Defaut value is 2, it is supposed to be a good compromise.
-#' @param palette A string array containing the color names to include in the plot. Across all plots, maps number will have the same colors. The color can be customized by indicating the path to an Excel file containing new color names. The first column should contain the maps numbers and the second column the color names.
+#' @param palette A string array containing the color names to include in the plot. Across all plots, maps number will have the same colors. by default the color palette is default, another possibility is to set it on "alternative". This option will use different colors  The color can be customized by indicating the path to an Excel file containing new color names. The first column should contain the maps numbers and the second column the color names.
 #' @keywords plot microstates Cartool
 #' @export
 
@@ -53,6 +53,33 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
     color_reference <- data.frame(maps_numbers, colors)
     color_reference$colors <- as.character(color_reference$colors)
     color_reference$maps_numbers <- as.character(color_reference$maps_numbers)
+  } else if(palette == "alternative"){
+    maps_numbers <- 40:1
+    colors <- c("darkgreen",      "coral1",
+                "cornflowerblue",  "chartreuse3",
+                "cyan4",           "dodgerblue3",
+                "firebrick3",      "forestgreen",
+                "darkorange2",     "darkorchid",
+                "darkred",         "darkseagreen2",
+                "darkslategray2",  "deeppink3",
+                "gold2",           "darkolivegreen2",
+                "darkmagenta",     "deepskyblue2",
+                "aquamarine3",     "burlywood4",
+                "cadetblue4",      "blue3",
+                "darkslateblue",   "gray54",
+                "lightblue2",      "lightgoldenrod2",
+                "lightsalmon2",    "mediumpurple2",
+                "navyblue",        "magenta3",
+                "steelblue2",      "tan2",
+                "yellowgreen",     "turquoise4",
+                "royalblue2",      "red4",
+                "lightsteelblue2", "plum4",
+                "mediumvioletred", "mediumseagreen")
+
+    color_reference <- data.frame(maps_numbers, colors)
+    color_reference$colors <- as.character(color_reference$colors)
+    color_reference$maps_numbers <- as.character(color_reference$maps_numbers)
+
   } else {
     color_reference <- read_excel(palette)
     names(color_reference)[1] <- "maps_numbers"
