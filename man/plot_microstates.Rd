@@ -9,7 +9,7 @@ plot_microstates(
   vline_onset = FALSE,
   time_ms = "none",
   size_hist = 2,
-  palette = "Spectral"
+  palette = "default"
 )
 }
 \arguments{
@@ -21,7 +21,7 @@ plot_microstates(
 
 \item{size_hist}{The microstates maps are represented by segments present at each time frame. However, depending on the width of the desired plot, there might be spaces between segments. This parameter allows the user to change the width of the segment to cover the entire space. To better understand the purpose of this parameter, try setting it to 0.5 and to 4 and see the difference. Defaut value is 2, it is supposed to be a good compromise.}
 
-\item{palette}{A string array containing the palette name. See here the different palettes available: https://www.datanovia.com/en/wp-content/uploads/dn-tutorials/ggplot2/figures/0101-rcolorbrewer-palette-rcolorbrewer-palettes-1.png. This argument is helpful when plotting forward and backward maps, avoiding to have the same maps color for forward and backward. Default is "Spectral".}
+\item{palette}{A string array containing the color names to include in the plot. Across all plots, maps number will have the same colors. The color can be customized by indicating the path to an Excel file containing new color names. The first column should contain the maps numbers and the second column the color names.}
 }
 \description{
 This function returns a list of plots, one for each condition entered in the fitting or segmentation in Cartool.
