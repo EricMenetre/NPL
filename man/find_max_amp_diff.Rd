@@ -7,7 +7,7 @@
 find_max_amp_diff(data, condition_var, time_var, N_electrodes)
 }
 \arguments{
-\item{data}{A dataset imported with the import_epochs.ep() function}
+\item{data}{A dataset imported with the import.epochs.ep() function}
 
 \item{condition_var}{variable of data containing the different conditions for each subject. Use the tidy format (simply the column name without $ or data[])}
 
@@ -16,7 +16,7 @@ find_max_amp_diff(data, condition_var, time_var, N_electrodes)
 \item{N_electrodes}{Number of electrodes used in the file.}
 }
 \description{
-This function takes a data set imported by the import_epochs.ep() function and evaluates the differences regarding the area under the curve (AUC) for two conditions for each electrode, and performs the difference. The higher the differences of AUC, the more different the conditions.
+This function takes a data set imported by the import.epochs.ep() function and evaluates the differences regarding the area under the curve (AUC) for two conditions for each electrode, and performs the difference. The higher the differences of AUC, the more different the conditions.
 For now, the function takes only datasets with two conditions. If your dataset has a higher number of conditions, please consider applying this function 2 conditions by 2 conditions.
 Be careful, a minimal difference of AUC does not necessarily mean that there is no difference between two conditions. If the temporal window is large enough, two curves intersecting in an X shape might result to a minimal differences. Differences in time lag between two condition will also have a small AUC difference. This function helps you to chose the right electrodes but do not use it blindly !
 }

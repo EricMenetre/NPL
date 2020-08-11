@@ -10,6 +10,8 @@ subtract.eeg(file1, file2, path_save)
 \item{file1}{First file to do the subtraction. file2 is subtracted from file1}
 
 \item{file2}{Second file to do the subtraction. file2 is subtracted from file1}
+
+\item{path_save}{Path where to save the subtraction result.}
 }
 \description{
 This function creates a new epoch under the .ep format from the subtraction of two files of the same dimension. Careful the function is not written efficiently

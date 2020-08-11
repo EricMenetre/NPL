@@ -4,10 +4,12 @@
 \alias{tanova.ragu.to.cartool}
 \title{A function to transfer tanova results from Ragu to Cartool}
 \usage{
-tanova.ragu.to.cartool(file)
+tanova.ragu.to.cartool(file, sig_cut_off = 0.05)
 }
 \arguments{
 \item{file}{.txt file containing the tanova results from RAGU}
+
+\item{sig_cut_off}{Significance threshold according to which dichotomize the data. Default is 0.05}
 }
 \description{
 This function takes the .txt files from the RAGU software and transforms it into a .ep files. The p-values are dichotomized. p-val < 0.05 are took down to 0 wilhe the p-val > 0.05 are set to 1.
