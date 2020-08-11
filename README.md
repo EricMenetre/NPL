@@ -66,6 +66,9 @@ citation("NPL")
 
 ### Functions included in the package (V0.0.1.16):
 
+A complete tutorial on how to use these functions is available [here](https://github.com/EricMenetre/tuto_NPL_PKG)
+
+
 #### For behavioral analyses:
 * **clean.sd**: This function aims at cleaning the data from the extreme latencies (according to a certain number of SD). It creates an array of values without the values above and under the mean of each group.
 * **clean.subj.group**: This function is very similar to the previous one but aims at detecting if the average latencies of a subject are extreme compared to the rest of the group without this subject.
