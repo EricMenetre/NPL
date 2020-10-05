@@ -64,9 +64,10 @@ Please visit: https://www.unige.ch/fapse/psycholinguistique/equipes/npl/membres/
 citation("NPL")
 ```
 
-### Functions included in the package (V0.0.1.16):
+### Functions included in the package (V0.0.1.17):
 
 #### For behavioral analyses:
+* **screen_sd**: Before undergoing the cleaning of the data, one might want to know what is the best choice of number of standard deviations to clean the data by. This function explores different values of standard deviations and returns plots with different distributions to guide you in this choice.
 * **clean.sd**: This function aims at cleaning the data from the extreme latencies (according to a certain number of SD). It creates an array of values without the values above and under the mean of each group.
 * **clean.subj.group**: This function is very similar to the previous one but aims at detecting if the average latencies of a subject are extreme compared to the rest of the group without this subject.
 * **date.banner**: This simple function based on the bannerCommenter package creates a banner including the date and the day to keep track of the code.
@@ -77,6 +78,7 @@ citation("NPL")
 * **cross_anova_models**: This function, as the previous one, takes as input a list of models (using the `list()` function) and returns a cross table matrix (N models from the list times N models from the list) and gives the `anova()` of the models two by two. This helps chosing the model with the best fitting. The user should check the simpler model compared to the same model with one more parameter. If the p-value is significant, then take this model as reference and continue so until reaching the most complex model with a significantly better fitting than the previous one. 
 * **std_error**: Function to calculate the standard error of an array. 
 * **round_df**: This function allows the user to round values of an entire dataframe, even though it contains columns with characters. These columns will be simply ignored.
+
 
 
 #### For EEG analyses:

@@ -1,6 +1,6 @@
 Package: NPL
 Title: An incomplete toolkit for the researcher in NeuroPsychoLinguistic
-Version: 0.0.1.16
+Version: 0.0.1.17
 Authors@R: 
     person(given = "Eric",
            family = "MENETRE",
