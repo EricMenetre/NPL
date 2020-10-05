@@ -66,6 +66,9 @@ citation("NPL")
 
 ### Functions included in the package (V0.0.1.17):
 
+A complete tutorial on how to use these functions is available [here](https://github.com/EricMenetre/tuto_NPL_PKG). To download the tutorial, click on code and then download as .zip.
+
+
 #### For behavioral analyses:
 * **screen_sd**: Before undergoing the cleaning of the data, one might want to know what is the best choice of number of standard deviations to clean the data by. This function explores different values of standard deviations and returns plots with different distributions to guide you in this choice.
 * **clean.sd**: This function aims at cleaning the data from the extreme latencies (according to a certain number of SD). It creates an array of values without the values above and under the mean of each group.
