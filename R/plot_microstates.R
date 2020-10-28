@@ -117,7 +117,8 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
         geom_area(fill = "gray", alpha = 0.2)+
         geom_line(col = "black", size = 0.8)+
         theme_minimal()+
-        labs(y = expression(paste("Amplitude in ", mu,"v", sep = "")))+
+        labs(y = expression(paste("Amplitude in ", mu,"V", sep = "")))+
+        theme(axis.text = element_text(size = 12), axis.title = element_text(size = 12))+
         scale_color_manual(values=palette)
     }
   } else{
@@ -143,7 +144,8 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
           geom_line(col = "black", size = 0.8)+
           geom_vline(xintercept = 0, col = "black", alpha = 0.8, size = 0.7)+
           theme_minimal()+
-          labs(y = expression(paste("Amplitude in ", mu,"v", sep = "")))+
+          labs(y = expression(paste("Amplitude in ", mu,"V", sep = "")))+
+          theme(axis.text = element_text(size = 12), axis.title = element_text(size = 12))+
           scale_color_manual(values=palette)
         rm(data_plot, maps, palette)
       }
@@ -170,6 +172,7 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
           #geom_vline(xintercept = 0, col = "black", alpha = 0.8, size = 0.7)+
           theme_minimal()+
           labs(y = expression(paste("Amplitude in ", mu,"v", sep = "")))+
+          theme(axis.text = element_text(size = 12), axis.title = element_text(size = 12))+
           scale_color_manual(values=palette)
       }
     }
