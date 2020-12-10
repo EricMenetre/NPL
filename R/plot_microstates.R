@@ -10,7 +10,7 @@
 #' @keywords plot microstates Cartool
 #' @export
 
-plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", size_hist = 2, palette = "default"){
+plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", size_hist = 2, palette = "default", scale = "automatic"){
   require(ggplot2)
   require(ggpubr)
   require(RColorBrewer)
@@ -120,6 +120,9 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
         labs(y = expression(paste("Amplitude in ", mu,"V", sep = "")))+
         theme(axis.text = element_text(size = 12), axis.title = element_text(size = 12))+
         scale_color_manual(values=palette)
+      if(is.double(scale)){
+        plot_list[[i]] <- plot_list[[i]]+scale_y_continuous(limits = scale)
+      }
     }
   } else{
     if(vline_onset == TRUE){
@@ -148,6 +151,9 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
           theme(axis.text = element_text(size = 12), axis.title = element_text(size = 12))+
           scale_color_manual(values=palette)
         rm(data_plot, maps, palette)
+        if(is.double(scale)){
+          plot_list[[i]] <- plot_list[[i]]+scale_y_continuous(limits = scale)
+        }
       }
     } else if (vline_onset == FALSE) {
       for(i in 1:n_conditions){
@@ -174,6 +180,9 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
           labs(y = expression(paste("Amplitude in ", mu,"v", sep = "")))+
           theme(axis.text = element_text(size = 12), axis.title = element_text(size = 12))+
           scale_color_manual(values=palette)
+        if(is.double(scale)){
+          plot_list[[i]] <- plot_list[[i]]+scale_y_continuous(limits = scale)
+        }
       }
     }
   }

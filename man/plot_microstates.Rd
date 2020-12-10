@@ -9,7 +9,8 @@ plot_microstates(
   vline_onset = FALSE,
   time_ms = "none",
   size_hist = 2,
-  palette = "default"
+  palette = "default",
+  scale = "automatic"
 )
 }
 \arguments{
