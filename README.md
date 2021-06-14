@@ -24,6 +24,8 @@ install.packages("nlme")
 install.packages("DescTools")
 install.packages("stringr")
 install.packages("RColorBrewer")
+install.packages("abind")
+install.packages(stringr)
 ```
 If you encounter problem to install these packages, please update your R and Rstudio versions.
 
@@ -98,6 +100,7 @@ A complete tutorial on how to use these functions is available [here](https://gi
 * **import_stats_Ragu**: A function to import the statistics raw output from a microstates analysis performed in Ragu. This function imports the data and reshape them automatically to make them ready to be analyzed in R with statistical models (mixed models or RM ANOVA).
 * **read_seg_file**: This function is able to import raw data contained into a .seg file from Cartool (usually microstates segmentation file) into R for visualisation or analysis purposes.
 * **plot_microstates**: A function to create directly publishable microstates plots per condition, taking as input the .seg file from Cartool. A few customization possibilities are implemented. See `help(plot_microstates)` to see the different options.
+* **import_data_permuco**: A function to import the data to run the brainperm function() from the permuco4brain package. To run this function the data need to be either in ".ep", ".txt" or in ".asc" format and all the averaged signals per subject and contdition should be present in the same folder.
 
 #### Writing and reporting results
 

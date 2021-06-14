@@ -22,7 +22,7 @@ plot_microstates <- function(path_.seg, vline_onset = FALSE, time_ms = "none", s
   # Importation of the data
   data_ms <- read_seg_file(path_.seg)
   # Offer the possibility to the user to add a column with the time in ms
-  if(time_ms != "none"){
+  if(is.double(time_ms)){
     data_ms$time <- time_ms
   }
 
