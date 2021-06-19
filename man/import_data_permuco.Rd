@@ -16,3 +16,7 @@ import_data_permuco(path, N_electrodes, files_extension)
 \description{
 This function build a list containing each individual's average signal and transforms it into a 3D matrix to be analyzed with the brainperm() function from the permuco4brain package. For this function to work you will need to install the readr package and the abind package
 }
+\keyword{import}
+\keyword{mass}
+\keyword{permuco}
+\keyword{univariate}

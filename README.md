@@ -66,7 +66,7 @@ Please visit: https://www.unige.ch/fapse/psycholinguistique/equipes/npl/membres/
 citation("NPL")
 ```
 
-### Functions included in the package (V0.0.1.17):
+### Functions included in the package (V0.0.1.20):
 
 A complete tutorial on how to use these functions is available [here](https://github.com/EricMenetre/tuto_NPL_PKG). To download the tutorial, click on code and then download as .zip.
 
